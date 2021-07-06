@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <php>if(checkCurrentUrl('Home','Index','index')):</php>
+    <title>{:C('WEB_SITE_TITLE')}</title>
+    <php>else:</php>
+    <title>{$meta_title}&nbsp;|&nbsp;{:C('WEB_SITE_TITLE')}</title>
+    <php>endif;</php>
+    <link rel="icon" href="__PUBLIC__/img/favicon.ico">
+    <link rel="stylesheet" href="__PUBLIC__/libs/viewerjs/viewer.css">
+    <link rel="stylesheet" href="__PUBLIC__/static/libs/alert/alert.css">
+    <link rel="stylesheet" href="__PUBLIC__/static/libs/popup/popup.css">
+    <link rel="stylesheet" href="__PUBLIC__/static/iconfont/iconfont.css">
+    <link crossorigin="anonymous" integrity="sha384-K6LrEaceM4QP87RzJ7R4CDXcFN4cFW/A5Q7/fEp/92c2WV+woVw9S9zKDO23sNS+" href="https://lib.baomitu.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/static/libs/react-cus-form/react-cus-form.css?v=1.2.4">
+    <link rel="stylesheet" href="__PUBLIC__/static/libs/jQuery.msgBox/styles/msgBoxLight.css">
+    <link rel="stylesheet" href="__PUBLIC__/static/libs/dropload-gh-pages/dropload.css">
+    <link rel="stylesheet" href="__PUBLIC__/static/mobile/dist/css/style.css?v=a9fc397194">
+    <script src="__PUBLIC__/static/libs/polyfill.min.js"></script>
+    <script src="__PUBLIC__/libs/jquery.min.js"></script>
+    <script src="__PUBLIC__/libs/html5shiv.min.js"></script>
+    <script src="__PUBLIC__/static/libs/jQuery.msgBox/scripts/jquery.msgBox.js"></script>
+    <script src="__PUBLIC__/libs/viewerjs/viewer.js"></script>
+    <script src="__PUBLIC__/static/libs/tinyemitter.js"></script>
+    <script src="__PUBLIC__/static/libs/popup/popup.js"></script>
+    <script src="__PUBLIC__/static/libs/alert/alert.js"></script>
+    <script src="__PUBLIC__/static/common.js?v=1.17"></script>
+    <script src="__PUBLIC__/static/iconfont/iconfont.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-fOtis9P3S4B2asdoye1/YBpXMaRmuXu925gZhfQA/gnU3dLnftD8zvpk/lhP0YSG" src="https://lib.baomitu.com/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="__PUBLIC__/static/libs/dropload-gh-pages/dropload.min.js"></script>
+    
+    <block name="head_script"></block>
+    
+    
+    <php>if(env("APP_DEBUG")):</php>
+        <script crossorigin="anonymous" integrity="sha512-OLJZyStQ8f3eOpwECfl5lhLnm12WyNZynhh8zg1il/b5q/kDBg6SYKU2BjHHEyeS0hAjjcyyQtudEhHNPws0lg==" src="https://lib.baomitu.com/vConsole/3.4.1/vconsole.min.js"></script>
+        <script>
+            new VConsole();
+        </script>
+    <php>endif;</php>
+    
+    <script>
+    
+        function fontRem() {
+            var designW = 720;
+            var html = document.getElementsByTagName('html')[0];
+            var winW = Math.min(html.offsetWidth, 414);
+            html.style.fontSize = (winW / designW) * 100 + 'px';
+        }
+        fontRem();
+        window.onresize = fontRem;
+    </script>
+    
+    <script src="__PUBLIC__/static/mobile/dist/js/app.js?v=e34c4d2654"></script>
+</head>
+

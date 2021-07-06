@@ -1,0 +1,57 @@
+{
+  "path": {
+    "static": {
+      "base": "./Public/static",
+      "type": {
+        "css": {
+          "path": "/css",
+          "commonPath": "/commonStyle",
+          "filePath": "*.scss",
+          "entryFileName": "style.scss"
+        },
+        "js": {
+          "commonPath": "/commonScript",
+          "path": "/js",
+          "filePath": "*.ts",
+          "entryFileName": "app.ts"
+        }
+      },
+      "module": {
+        "default": {
+          "base": "/default",
+          "src": "/src",
+          "dist": "/dist"
+        },
+        "mobile": {
+          "base": "/mobile",
+          "src": "/src",
+          "dist": "/dist"
+        }
+      }
+    },
+    "html": {
+      "base": "./app/Home/View",
+      "module": {
+        "default": {
+          "base": "/default/Public",
+          "path": ["/head.html", "/footer.html"]
+        },
+        "mobile": {
+          "base": "/mobile/Public",
+          "path": ["/head.html", "/footer.html"]
+        }
+      }
+    },
+    "rev": {
+      "base": ".tmp/rev",
+      "type": {
+        "css": "/css",
+        "js": "/js"
+      },
+      "module": {
+        "default": "/default",
+        "mobile": "/mobile"
+      }
+    }
+  }
+}

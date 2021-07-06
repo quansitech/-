@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "target": "ES3",
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "module": "umd"
+  }
+}

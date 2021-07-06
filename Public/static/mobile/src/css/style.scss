@@ -1,0 +1,20 @@
+@import "../../../commonStyle/vars";
+@import "vars";
+
+.text-gold{
+  color: $color;
+}
+
+.flex{
+  color: $green;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: scale(1.1);
+}
+
+.test{
+  border-radius: 4px;
+  text-align: center;
+  color: gold;
+}

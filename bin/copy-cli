@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-function copy(){
+function run(){
     const { src, dest } = require('gulp');
     return src([
         `${__dirname}/../src/**/*.*`
@@ -10,4 +10,4 @@ function copy(){
         .pipe(dest(`${process.cwd()}`));
 }
 
-copy();
+run();

@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+function copy(){
+    const { src, dest } = require('gulp');
+    return src([
+        `${__dirname}/../src/**/*.*`
+    ],{
+        allowEmpty: true,
+    })
+        .pipe(dest(`${process.cwd()}`));
+}
+
+copy();

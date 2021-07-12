@@ -2,6 +2,12 @@ const { series, parallel, watch } = require('gulp');
 const css = require('./css');
 const js = require('./js');
 const serve = require('./serve');
+const ignore = require('./ignore');
+
+const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
+const stream = browserSync.stream;
+
 // const html = require('./html');
 // const utils = require('./utils');
 // const PATH_RESULT = utils.getStaticPathResult();
@@ -65,6 +71,7 @@ const serve = require('./serve');
 //         }
 //     }
 // }
+
 
 const DEFAULT_RELOAD = parallel(css.watchDefaultCss,js.watchDefaultJs);
 const DEFAULT_RUN = parallel(css.defaultCss,js.defaultJs);

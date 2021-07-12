@@ -1,7 +1,7 @@
 {
   "path": {
     "static": {
-      "base": "./Public/static",
+      "base": "./www/Public/static",
       "type": {
         "css": {
           "path": "/css",

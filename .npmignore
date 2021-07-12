@@ -1,0 +1,8 @@
+/src/node_modules
+/node_modules
+/.idea
+/src/.tmp
+/src/app
+/src/.env
+/src/www/Public/static/default/dist
+/src/www/Public/static/mobile/dist

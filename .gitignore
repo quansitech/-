@@ -1,3 +1,4 @@
-/node_modules
-/.tmp
+/src/node_modules
 /.idea
+/src/.tmp
+/node_modules

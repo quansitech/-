@@ -8,14 +8,15 @@
 
 前置条件:  docker 已安装
 
-1. your/docker/config/path/nginx/sites 目录下 复制一个文件
+1. your/docker/config/path/nginx/sites 目录下 复制一个nginx 配置文件
 
 2. 打开刚刚的文件,并修改以下字段
 
    server_name  PROJECT_NAME.qs.com;
+   
    root  /var/www/PROJECT_GIT_NAME/www;
 
-  3.修改系统hosts文件 新增127.0.0.1 PROJECT_NAME.qs.com
+ 3.修改系统hosts文件 新增127.0.0.1 PROJECT_NAME.qs.com
 
  4..env文件 增加 DOMAIN 字段，值为 PROJECT_NAME.qs.com
 

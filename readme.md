@@ -15,26 +15,22 @@
    server_name  PROJECT_NAME.qs.com;
    root  /var/www/PROJECT_GIT_NAME/www;
 
-   3.修改系统hosts文件 新增127.0.0.1 PROJECT_NAME.qs.com
+  3.修改系统hosts文件 新增127.0.0.1 PROJECT_NAME.qs.com
+
+ 4..env文件 增加 DOMAIN 字段，值为 PROJECT_NAME.qs.com
 
 #### 前端编译部分
 
-前置条件:  node 版本 <= 10.15, 可使用nvm安装,推荐node版本10.15
+前置条件:  node 版本 >= 14.17.1, 可使用nvm安装,推荐node版本14.17.1
 
-1. 准备 gulp目录,gulpfile.js,package.json
+1. npm安装 @quansitech/tp-frontend-template:  (如已安装 不需要再次执行)
 
-2. gulp/tasks.js   
+    在任意目录启动命令行， 输入 `cnpm i -g @quansitech/tp-frontend-template`
 
-    将变量 proxyHost 改成 PROJECT_NAME.qs.com
+2. 安装成功后，在项目根目录 命令行输入 `npx copy-tp-frontend-template`
 
-3. 准备 PROJECT_NAME/www/Public/static/default,
+3. 项目根目录 命令行输入 gulp reload 即可
 
-    PROJECT_NAME/www/Public/static/mobile
-
-    放到项目相应位置
-
-4. 在项目根目录打开命令行,运行gulp reload即可监听并自动刷新页面
-5. 上传代码到测试服前,需要把生成的文件add到git暂存区 不然没法上传
 
 
 
@@ -49,21 +45,18 @@
 
 ​	`gulp default:reload   `编译pc端并监听刷新
 
-​	`gulp build`  编译并压缩(运行完自动停止)
+​	`gulp run`  编译并压缩(运行完自动停止)
 
-​	`gulp default:build   ` 编译并压缩(运行完自动停止)
+​	`gulp default:run   ` 编译并压缩(运行完自动停止)
 
-​	`gulp mobile :build`  编译并压缩(运行完自动停止)
+​	`gulp mobile:run`  编译并压缩(运行完自动停止)
 
 
 
 每次对 css或 js 保存后,都会编译文件
 
-编译后,会生成一个新的文件,
-同时会修改head, footer里面的引用的文件名
+编译后,会修改head, footer里面的文件名的版本号
 
-- 若遇到head.html 在git冲突 请选择任意一个冲突版本， 并重启gulp,待编译后, git重新add  才能上传测试服
-- 若编译错误 会自动停止，需要重启gulp
 - 自动生成sourcemap 可在浏览器查看源代码 ,源文件名 以及行号(行号可能不太准确)
 
 

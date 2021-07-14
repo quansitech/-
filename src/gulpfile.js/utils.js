@@ -51,6 +51,8 @@ const getHtmlPath = (path)=>{
         }
     }
 
+    RESULT.common = base;
+
     return RESULT;
 }
 

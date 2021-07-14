@@ -1,0 +1,90 @@
+.btn{
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  padding: 0 20px;
+
+  .btn-color($bg-color,$border-color: $bg-color,$color: $bg-color){
+    background: $bg-color;
+    color: #fff;
+    border: 1px solid $border-color;
+    &.btn-border{
+      color: $color;
+      background: #fff;
+      border: 1px solid $color;
+    }
+  }
+
+  &.btn-square{
+    border-radius: 0;
+  }
+
+  &.btn-radius{
+    border-radius: 25px;
+  }
+
+  &.btn-square-radius{
+    border-radius: 4px;
+  }
+
+  &.btn-block{
+    display: flex;
+    width: 100%;
+  }
+
+  &[disabled]{
+    opacity: .6;
+    pointer-events: none;
+  }
+}
+
+div.msgBoxBackGround {
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: 1000;
+}
+div.msgBox {
+  box-sizing: border-box;
+  padding: 15px;
+  position: fixed;
+  z-index: 1050;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+  .msgBoxTitle {
+    width: 100%;
+    border-bottom: 0;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+  }
+  .msgBoxImage {
+    display: none;
+  }
+  .msgBoxContent {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    span{
+      color: #333;
+    }
+  }
+
+  div.msgBoxButtons {
+    display: flex;
+    justify-content: space-around;
+  }
+}

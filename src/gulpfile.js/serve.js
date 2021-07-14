@@ -5,7 +5,7 @@ require('dotenv').config();
 function getPort(domain){
     const PORT_STRING_START_POS = 0;
     const PORT_LENGTH = 4;
-    return md5(domain).replace(/[^\d]/g,'').substr(PORT_STRING_START_POS, PORT_LENGTH);
+    return md5(domain).replace(/[^[1-9]/g,'').substr(PORT_STRING_START_POS, PORT_LENGTH);
 }
 
 function serve() {

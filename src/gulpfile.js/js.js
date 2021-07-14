@@ -6,7 +6,7 @@ const lazypipe = require('lazypipe');
 const WEBPACK_CONFIG = require('../webpack.config.js');
 const html = require('./html');
 const rev = require('gulp-rev-gqy');
-
+const browserSync = require('browser-sync').create();
 
 const utils = require('./utils');
 const STATIC_PATH_RESULT = utils.getStaticPathResult();
@@ -32,7 +32,7 @@ function defaultJs(){
 function watchDefaultJs(cb){
     gulp.watch(STATIC_PATH_RESULT.default.js.watchFilePath,{
         ignoreInitial: false,
-    }, gulp.series(defaultJs, html.default));
+    }, gulp.series(defaultJs, html.default)).on('change', browserSync.reload);
     cb();
 }
 
@@ -49,7 +49,7 @@ function mobileJs(){
 function watchMobileJs(cb){
     gulp.watch(STATIC_PATH_RESULT.mobile.js.watchFilePath,{
         ignoreInitial: false,
-    }, gulp.series(mobileJs, html.mobile));
+    }, gulp.series(mobileJs, html.mobile)).on('change', browserSync.reload);
     cb();
 }
 

@@ -1,0 +1,185 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+input, button, textarea, select, form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+  outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+/* 普通文章样式 */
+.article-content{
+  overflow: hidden;
+  strong,b{
+    font-weight: bold;
+  }
+  i,em{
+    font-style: italic;
+  }
+  ol,ul,li{
+    list-style: inherit;
+  }
+  table {
+    border-collapse: collapse;
+    width: auto;
+    word-break: break-all;
+    max-width: 100%;
+    table-layout: fixed;
+    td,th{
+      word-break: break-all;
+      border: 1px solid #f2f2f2;
+      width: auto;
+      padding: 5px 10px;
+      vertical-align: middle;
+    }
+  }
+  iframe{
+    max-width: 100%;
+  }
+  video,audio{
+    max-width: 100%;
+    height: auto;
+  }
+  p,span,div{
+    word-break: break-word;
+    text-align: justify;
+  }
+  p, pre{
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  p:last-child{
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4,h5,h6{
+    font-size: 14px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    padding: 15px 0;
+    font-weight: bold;
+  }
+  a {
+    color: #0b76ac;
+    text-decoration: underline;
+  }
+  ol,ul{
+    padding: 10px 20px;
+  }
+  blockquote {
+    padding-left: 10px;
+    border-left: 3px solid #dbdbdb;
+    font-size: 14px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+
+html{
+  min-height: 100%;
+  height: 100%;
+  body{
+    line-height: 1.2;
+    min-height: 100%;
+    font: 16px/1.4286 arial,
+      "PingFang SC",
+      miui,system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      Helvetica Neue,
+      Helvetica,
+      sans-serif;
+    color: #333;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    .page,main{
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+    ol, ul,li {
+      margin-bottom: 0;
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      cursor: pointer;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    p{
+      line-height: 1.5;
+    }
+
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+}
+
+input,button,textarea,select{
+  border: 0;
+  &:focus{
+    outline: none;
+  }
+}
+a{
+  color: unset;
+}
+button{
+  border: 0;
+}
+

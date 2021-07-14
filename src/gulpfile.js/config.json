@@ -34,11 +34,21 @@
       "module": {
         "default": {
           "base": "/default/Public",
-          "path": ["/head.html", "/footer.html"]
+          "path": [
+            "/head.html",
+            "/head.blade.php",
+            "/footer.html",
+            "/footer.blade.php"
+          ]
         },
         "mobile": {
           "base": "/mobile/Public",
-          "path": ["/head.html", "/footer.html"]
+          "path": [
+            "/head.html",
+            "/head.blade.php",
+            "/footer.html",
+            "/footer.blade.php"
+          ]
         }
       }
     },

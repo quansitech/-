@@ -4,6 +4,7 @@ const sass = require('gulp-sass')(require('sass'));
 const html = require('./html');
 const rev = require('gulp-rev-gqy');
 const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
 
 const utils = require('./utils');
 const STATIC_PATH_RESULT = utils.getStaticPathResult();
@@ -31,7 +32,7 @@ function defaultCss(){
 function watchDefaultCss(cb){
     gulp.watch(STATIC_PATH_RESULT.default.css.watchFilePath,{
         ignoreInitial: false,
-    }, gulp.series(defaultCss, html.default));
+    }, gulp.series(defaultCss, html.default)).on('change', browserSync.stream);
     cb();
 }
 
@@ -47,7 +48,7 @@ function mobileCss(){
 function watchMobileCss(cb){
     gulp.watch(STATIC_PATH_RESULT.mobile.css.watchFilePath,{
         ignoreInitial: false,
-    }, gulp.series(mobileCss, html.mobile));
+    }, gulp.series(mobileCss, html.mobile)).on('change', browserSync.stream);
     cb();
 }
 

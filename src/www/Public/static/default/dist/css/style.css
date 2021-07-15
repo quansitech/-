@@ -3,7 +3,6 @@
 }
 
 .flex {
-  color: green;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -19,14 +18,14 @@
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .test {
   border-radius: 4px;
-  text-align: center;
   color: gold;
+}
+
+.text-center {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

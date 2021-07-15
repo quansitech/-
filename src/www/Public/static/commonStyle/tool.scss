@@ -5,25 +5,25 @@
 }
 
 //图片超出裁剪
-.img-wrap($width,$height: auto) {
-  width: $width;
-  height: $height;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0;
-  flex-shrink: 0;
-}
-
-//设置圆形图片
-.avatar($size) {
-  border-radius: 50%;
-  .img-wrap($size, $size);
-  img {
-    border-radius: 50%;
-  }
-}
+//.img-wrap($width,$height: auto) {
+//  width: $width;
+//  height: $height;
+//  overflow: hidden;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  font-size: 0;
+//  flex-shrink: 0;
+//}
+//
+////设置圆形图片
+//.avatar($size) {
+//  border-radius: 50%;
+//  .img-wrap($size, $size);
+//  img {
+//    border-radius: 50%;
+//  }
+//}
 
 .text-cut {
   text-overflow: ellipsis;

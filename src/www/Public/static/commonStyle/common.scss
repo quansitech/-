@@ -1,47 +1,47 @@
-.btn{
-  text-align: center;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 35px;
-  font-size: 16px;
-  cursor: pointer;
-  color: #fff;
-  padding: 0 20px;
-
-  .btn-color($bg-color,$border-color: $bg-color,$color: $bg-color){
-    background: $bg-color;
-    color: #fff;
-    border: 1px solid $border-color;
-    &.btn-border{
-      color: $color;
-      background: #fff;
-      border: 1px solid $color;
-    }
-  }
-
-  &.btn-square{
-    border-radius: 0;
-  }
-
-  &.btn-radius{
-    border-radius: 25px;
-  }
-
-  &.btn-square-radius{
-    border-radius: 4px;
-  }
-
-  &.btn-block{
-    display: flex;
-    width: 100%;
-  }
-
-  &[disabled]{
-    opacity: .6;
-    pointer-events: none;
-  }
-}
+//.btn{
+//  text-align: center;
+//  display: inline-flex;
+//  justify-content: center;
+//  align-items: center;
+//  height: 35px;
+//  font-size: 16px;
+//  cursor: pointer;
+//  color: #fff;
+//  padding: 0 20px;
+//
+//  .btn-color($bg-color,$border-color: $bg-color,$color: $bg-color){
+//    background: $bg-color;
+//    color: #fff;
+//    border: 1px solid $border-color;
+//    &.btn-border{
+//      color: $color;
+//      background: #fff;
+//      border: 1px solid $color;
+//    }
+//  }
+//
+//  &.btn-square{
+//    border-radius: 0;
+//  }
+//
+//  &.btn-radius{
+//    border-radius: 25px;
+//  }
+//
+//  &.btn-square-radius{
+//    border-radius: 4px;
+//  }
+//
+//  &.btn-block{
+//    display: flex;
+//    width: 100%;
+//  }
+//
+//  &[disabled]{
+//    opacity: .6;
+//    pointer-events: none;
+//  }
+//}
 
 div.msgBoxBackGround {
   top: 0;

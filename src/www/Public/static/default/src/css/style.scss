@@ -1,4 +1,7 @@
 @import "../../../commonStyle/vars";
+@import "../../../commonStyle/reset";
+@import "../../../commonStyle/tool";
+@import "../../../commonStyle/common";
 @import "vars";
 
 .text-gold{
@@ -6,16 +9,13 @@
 }
 
 .flex{
-  color: $green;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transform: scale(1.1);
 }
 
 .test{
   border-radius: 4px;
-  text-align: center;
   color: gold;
 }
 

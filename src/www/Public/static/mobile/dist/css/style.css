@@ -1,9 +1,324 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+input, button, textarea, select, form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* 普通文章样式 */
+.article-content {
+  overflow: hidden;
+}
+.article-content strong, .article-content b {
+  font-weight: bold;
+}
+.article-content i, .article-content em {
+  font-style: italic;
+}
+.article-content ol, .article-content ul, .article-content li {
+  list-style: inherit;
+}
+.article-content table {
+  border-collapse: collapse;
+  width: auto;
+  word-break: break-all;
+  max-width: 100%;
+  table-layout: fixed;
+}
+.article-content table td, .article-content table th {
+  word-break: break-all;
+  border: 1px solid #f2f2f2;
+  width: auto;
+  padding: 5px 10px;
+  vertical-align: middle;
+}
+.article-content iframe {
+  max-width: 100%;
+}
+.article-content video, .article-content audio {
+  max-width: 100%;
+  height: auto;
+}
+.article-content p, .article-content span, .article-content div {
+  word-break: break-word;
+  text-align: justify;
+}
+.article-content p, .article-content pre {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+.article-content h1 {
+  font-size: 20px;
+}
+.article-content h2 {
+  font-size: 18px;
+}
+.article-content h3 {
+  font-size: 16px;
+}
+.article-content h4, .article-content h5, .article-content h6 {
+  font-size: 14px;
+}
+.article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6 {
+  padding: 15px 0;
+  font-weight: bold;
+}
+.article-content a {
+  color: #0b76ac;
+  text-decoration: underline;
+}
+.article-content ol, .article-content ul {
+  padding: 10px 20px;
+}
+.article-content blockquote {
+  padding-left: 10px;
+  border-left: 3px solid #dbdbdb;
+  font-size: 14px;
+}
+.article-content blockquote p {
+  font-size: 14px;
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+}
+html body {
+  line-height: 1.2;
+  min-height: 100%;
+  font: 16px/1.4286 arial, "PingFang SC", miui, system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+  color: #333;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+html body .page, html body main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+html body ol, html body ul, html body li {
+  margin-bottom: 0;
+  list-style: none;
+}
+html body a {
+  text-decoration: none;
+  cursor: pointer;
+}
+html body blockquote, html body q {
+  quotes: none;
+}
+html body blockquote:before, html body blockquote:after,
+html body q:before, html body q:after {
+  content: none;
+}
+html body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html body p {
+  line-height: 1.5;
+}
+html body img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+input, button, textarea, select {
+  border: 0;
+}
+input:focus, button:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+a {
+  color: unset;
+}
+
+button {
+  border: 0;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.text-cut {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-cut-2 {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-cut-3 {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.text-cut-4 {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+div.msgBoxBackGround {
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: 1000;
+}
+
+div.msgBox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px;
+  position: fixed;
+  z-index: 1050;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+}
+div.msgBox .msgBoxTitle {
+  width: 100%;
+  border-bottom: 0;
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  font-weight: normal;
+}
+div.msgBox .msgBoxImage {
+  display: none;
+}
+div.msgBox .msgBoxContent {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+div.msgBox .msgBoxContent span {
+  color: #333;
+}
+div.msgBox div.msgBoxButtons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
 .text-gold {
   color: gold;
 }
 
 .flex {
-  color: green;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -25,8 +340,6 @@
 }
 
 .test {
-  border-radius: 4px;
-  text-align: center;
-  color: gold;
+  background-color: green;
 }
 /*# sourceMappingURL=style.css.map */

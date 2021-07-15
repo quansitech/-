@@ -1,10 +1,10 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./Public/static/commonScript/vars.ts":
-/*!********************************************!*\
-  !*** ./Public/static/commonScript/vars.ts ***!
-  \********************************************/
+/***/ "./www/Public/static/commonScript/vars.ts":
+/*!************************************************!*\
+  !*** ./www/Public/static/commonScript/vars.ts ***!
+  \************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
 var TEST_NAME = 'viki';
@@ -13,10 +13,10 @@ exports.name = TEST_NAME;
 
 /***/ }),
 
-/***/ "./Public/static/default/src/js/vars.ts":
-/*!**********************************************!*\
-  !*** ./Public/static/default/src/js/vars.ts ***!
-  \**********************************************/
+/***/ "./www/Public/static/default/src/js/vars.ts":
+/*!**************************************************!*\
+  !*** ./www/Public/static/default/src/js/vars.ts ***!
+  \**************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
 exports.name = 'lucy';
@@ -54,11 +54,11 @@ exports.name = 'lucy';
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-/*!*********************************************!*\
-  !*** ./Public/static/default/src/js/app.ts ***!
-  \*********************************************/
-var vars = __webpack_require__(/*! ./vars */ "./Public/static/default/src/js/vars.ts");
-var commonName = __webpack_require__(/*! ../../../commonScript/vars */ "./Public/static/commonScript/vars.ts");
+/*!*************************************************!*\
+  !*** ./www/Public/static/default/src/js/app.ts ***!
+  \*************************************************/
+var vars = __webpack_require__(/*! ./vars */ "./www/Public/static/default/src/js/vars.ts");
+var commonName = __webpack_require__(/*! ../../../commonScript/vars */ "./www/Public/static/commonScript/vars.ts");
 var hello = function (compiler) {
     console.log("Hello from " + compiler);
 };

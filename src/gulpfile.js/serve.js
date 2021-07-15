@@ -1,6 +1,7 @@
 const browserSync = require('browser-sync').create();
 const md5 = require('md5');
 require('dotenv').config();
+const gulp = require('gulp');
 
 function getPort(domain){
     const PORT_STRING_START_POS = 0;
@@ -9,10 +10,17 @@ function getPort(domain){
 }
 
 function serve() {
-    return browserSync.init({
+    gulp.watch([
+        './app/**/*.html',
+        './app/**/*.blade.php'
+    ]).on('change', browserSync.reload);
+
+    browserSync.init({
         proxy: process.env.DOMAIN,
         port: getPort(process.env.DOMAIN),
     });
+
+    cb();
 }
 
 exports.serve = serve;

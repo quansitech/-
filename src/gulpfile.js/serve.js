@@ -9,7 +9,7 @@ function getPort(domain){
     return md5(domain).replace(/[^[1-9]/g,'').substr(PORT_STRING_START_POS, PORT_LENGTH);
 }
 
-function serve() {
+function serve(cb) {
     gulp.watch([
         './app/**/*.html',
         './app/**/*.blade.php'

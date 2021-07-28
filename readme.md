@@ -30,7 +30,9 @@
 
 2. 安装成功后，在项目根目录 命令行输入 `npx copy-tp-frontend-template`
 
-3. 项目根目录 命令行输入 gulp reload 即可
+3. 项目根目录 运行`cnpm i` or `yarn`,安装前端环境;
+
+4. 项目根目录 命令行输入 gulp reload 即可
 
 
 

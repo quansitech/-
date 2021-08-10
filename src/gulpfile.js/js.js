@@ -7,6 +7,7 @@ const WEBPACK_CONFIG = require('../webpack.config.js');
 const html = require('./html');
 const rev = require('gulp-rev-gqy');
 const browserSync = require('browser-sync').create();
+const babel = require('gulp-babel');
 
 const utils = require('./utils');
 const STATIC_PATH_RESULT = utils.getStaticPathResult();
@@ -14,7 +15,10 @@ const REV_PATH_RESULT = utils.getRevPathResult();
 
 const JS_PIPE = lazypipe()
     .pipe(named)
-    .pipe(gulpWebpack, WEBPACK_CONFIG, webpack);
+    .pipe(gulpWebpack, WEBPACK_CONFIG, webpack)
+    .pipe(babel, {
+        presets: ['@babel/env']
+    });
 
 
 const REV_PIPE = lazypipe()

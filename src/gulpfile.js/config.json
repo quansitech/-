@@ -12,8 +12,8 @@
         "js": {
           "commonPath": "/commonScript",
           "path": "/js",
-          "filePath": "*.ts",
-          "entryFileName": "app.ts"
+          "filePath": "*.js",
+          "entryFileName": "app.js"
         }
       },
       "module": {

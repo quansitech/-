@@ -4,6 +4,9 @@ require('dotenv').config();
 const gulp = require('gulp');
 
 function getPort(domain){
+    if(!domain){
+        throw new Error(`DOMAIN is not defined! Please set DOMAIN at .env file`);
+    }
     const PORT_STRING_START_POS = 0;
     const PORT_LENGTH = 4;
     return md5(domain).replace(/[^[1-9]/g,'').substr(PORT_STRING_START_POS, PORT_LENGTH);

@@ -4,7 +4,7 @@ module.exports = {
     mode: 'development',
     // entry will using the params form gulp.src
     resolve: {
-        extensions: ['.ts', '.tsx', '.js']
+        extensions: ['.js']
     },
     devtool: 'source-map',
     output: {
@@ -13,8 +13,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.ts?$/,
-                use: 'ts-loader',
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             }
         ]
     },
